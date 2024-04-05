@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVitae - Jesus Garcia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      display: flex;
+      max-width: 800px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-column {
+      flex: 1;
+      padding: 20px;
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .right-column {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .profile-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-left: 30%;
+      margin-right: auto;
+      background-color: #ccc;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .profile-image:hover {
+      transform: scale(1.1);
+    }
+
+    .section {
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .section:hover {
+      background-color: #0056b3;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .section p, .section ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .section ul li {
+      margin-bottom: 5px;
+    }
+
+    .horizontal-line {
+      border-top: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .timeline {
+      margin-left: 20px;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 5px;
+      width: 2px;
+      height: 100%;
+      background-color: #007bff;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: -8px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #007bff;
+      border: 2px solid #fff;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      padding-left: 30px;
+    }
+
+    .timeline-item:hover::before {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-column">
+      <img class="profile-image" src="Jesus.jpg" alt="Profile Image">
+      <div class="section">
+        <div class="horizontal-line"></div>
+        <h2>Contacto</h2>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> <strong>Email:</strong> hola@sitioincreible.com</p>
+          <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> (55) 1234-5678</p>
+          <p><i class="fas fa-globe"></i> <strong>Website:</strong> www.sitioincreible.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Calle Cualquiera 123, Cualquier Lugar</p>
+        </div>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="section">
+        <h2>Educación</h2>
+        <ul>
+          <li>Bachiller Técnico Medio - Madre Rafols</li>
+          <li>Estudios Universitarios - UVM</li>
+        </ul>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="section">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>Desarrollo de software</li>
+          <li>Redes de computadoras</li>
+          <li>Seguridad informática</li>
+          <li>Algoritmos y estructuras de datos</li>
+          <li>Programación en varios lenguajes (C++, JavaScript, Python)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-column">
+      <h1 style="font-size: 45px;">Jesús Garcia</h1>
+      <h3>Ing. en Computación</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor vitae urna lacinia, vitae hendrerit leo hendrerit.</p>
+      <div class="horizontal-line"></div>
+      <h2 class="timeline-heading">Experiencia Laboral</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <p>2010-2012: Empresa A (Área de desarrollo web)</p>
+        </div>
+        <div class="timeline-item">
+          <p>2012-2014: Empresa B (Área de desarrollo móvil)</p>
+        </div>
+        <div class="timeline-item">
+          <p>2015-2018: Empresa C (Área de infraestructura de redes)</p>
+        </div>
+        <div class="timeline-item">
+          <p>2018-presente: Empresa D (Área de ciberseguridad)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Animaciones de las secciones de la izquierda
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.addEventListener('mouseover', () => {
+          section.style.backgroundColor = '#0056b3';
+        });
+        section.addEventListener('mouseout', () => {
+          section.style.backgroundColor = '#007bff';
+        });
+      });
+
+      // Animaciones de los elementos de la línea de tiempo
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      timelineItems.forEach(item => {
+        item.addEventListener('mouseover', () => {
+          item.querySelector('::before').style.backgroundColor = '#0056b3';
+        });
+        item.addEventListener('mouseout', () => {
+          item.querySelector('::before').style.backgroundColor = '#007bff';
+        });
+      });
+
+      // Animación de la imagen de perfil
+      const profileImage = document.querySelector('.profile-image');
+      profileImage.addEventListener('mouseover', () => {
+        profileImage.style.transform = 'scale(1.1)';
+      });
+      profileImage.addEventListener('mouseout', () => {
+        profileImage.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+</body>
+</html>
